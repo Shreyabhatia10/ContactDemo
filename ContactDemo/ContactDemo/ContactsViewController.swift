@@ -34,22 +34,10 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.nameLabelOutlet.text = contacts[indexPath.row].name
         let mobileNumber = "Mobile: \(contacts[indexPath.row].contact[0])"
         cell.mobileNumberOutlet.setTitle(mobileNumber, for: .normal)
-//        cell.mobileNumberOutlet.addTarget(self, action: #selector(showPopOverView(_:)), for: .touchUpInside)
+        cell.callButtonOutlet.tag = indexPath.row
+        cell.callButtonOutlet.addTarget(self, action: #selector(callNumber(_:)), for: .touchUpInside)
         tableView.endUpdates()
         return cell
-    }
-    @objc func showPopOverView(_ sender: UIButton) {
-        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "contactsDetails") else { return }
-        
-        popVC.modalPresentationStyle = .popover
-        
-        let popOverVC = popVC.popoverPresentationController
-        popOverVC?.delegate = self as? UIPopoverPresentationControllerDelegate
-        popOverVC?.sourceView = sender
-        popOverVC?.sourceRect = CGRect(x: sender.bounds.midX, y: sender.bounds.minY, width: 0, height: 0)
-        popVC.preferredContentSize = CGSize(width: 250, height: 250)
-        
-        self.present(popVC, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if selectedIndexPath == indexPath.row {
@@ -68,7 +56,8 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         }
         tableView.reloadData()
     }
-    private func callNumber(phoneNumber:String) {
+    @objc private func callNumber(_ sender: UIButton) {
+        let phoneNumber = contacts[sender.tag].contact[0]
         if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
             let application:UIApplication = UIApplication.shared
             if (application.canOpenURL(phoneCallURL)) {
@@ -77,16 +66,15 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     @IBAction func mobileNumberButtonAction(_ sender: UIButton) {
-        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "contactsDetails") else { return }
-        
-        popVC.modalPresentationStyle = .popover
-        
+        let cell = sender.superview!.superview!.superview as! UITableViewCell
+        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "popOver") else { return }
+        popVC.modalPresentationStyle = .overCurrentContext
+        popVC.preferredContentSize = CGSize(width: 300, height: 300)
         let popOverVC = popVC.popoverPresentationController
+        popOverVC?.permittedArrowDirections = .any
         popOverVC?.delegate = self as? UIPopoverPresentationControllerDelegate
-        popOverVC?.sourceView = sender
-        popOverVC?.sourceRect = CGRect(x: sender.bounds.midX, y: sender.bounds.minY, width: 0, height: 0)
-        popVC.preferredContentSize = CGSize(width: 250, height: 250)
-        
-        self.present(popVC, animated: true)
+        popOverVC?.sourceView = cell.contentView
+        popOverVC?.sourceRect = sender.frame
+        self.present(popVC, animated: true, completion: nil)
     }
 }
