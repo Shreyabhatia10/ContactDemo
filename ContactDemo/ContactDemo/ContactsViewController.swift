@@ -19,7 +19,6 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         contacts = ContactManager.contactArray
     }
     //MARK: UITableViewDataSource Methods
@@ -56,6 +55,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         }
         tableView.reloadData()
     }
+    //calling on a number
     @objc private func callNumber(_ sender: UIButton) {
         let phoneNumber = contacts[sender.tag].contact[0]
         if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
@@ -65,6 +65,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
             }
         }
     }
+    // On click it will reflect popover view
     @IBAction func mobileNumberButtonAction(_ sender: UIButton) {
         let cell = sender.superview!.superview!.superview as! UITableViewCell
         guard let popVC = storyboard?.instantiateViewController(withIdentifier: "popOver") else { return }

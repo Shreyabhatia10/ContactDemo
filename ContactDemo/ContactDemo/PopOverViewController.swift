@@ -18,11 +18,9 @@ class PopOverViewController: UIViewController {
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(tapGesture)
         myTableView.isUserInteractionEnabled = false
-//        view.addSubview(infosView)
-    }
-    @objc func myviewTapped(_ recognizer: UIGestureRecognizer) {
-        self.dismiss(animated: true, completion: nil)
-//        print("button is tapped")
     }
     // function which is triggered when handleTap is called
+    @objc func myviewTapped(_ recognizer: UIGestureRecognizer) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
