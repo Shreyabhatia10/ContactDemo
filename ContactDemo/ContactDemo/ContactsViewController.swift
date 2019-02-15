@@ -32,6 +32,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
             return UITableViewCell()
         }
         cell.nameLabelOutlet.text = contacts[indexPath.row].name
+        cell.nameFirstLetterOutlet.text = String(contacts[indexPath.row].name.first!)
         let mobileNumber = "Mobile: \(contacts[indexPath.row].contact[0])"
         cell.mobileNumberOutlet.setTitle(mobileNumber, for: .normal)
         cell.callButtonOutlet.tag = indexPath.row

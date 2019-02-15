@@ -202,6 +202,7 @@
                                             <outlet property="contactDetailView" destination="d25-0j-6UD" id="Jdb-8n-eCv"/>
                                             <outlet property="inviteOutlet" destination="1t9-ZE-41C" id="3oc-yj-2Nd"/>
                                             <outlet property="mobileNumberOutlet" destination="kTQ-dv-NcV" id="SBB-pT-IUk"/>
+                                            <outlet property="nameFirstLetterOutlet" destination="b0i-N5-nov" id="glg-jL-Y5e"/>
                                             <outlet property="nameLabelOutlet" destination="Cty-CE-1ko" id="kEr-Oj-F7j"/>
                                             <outlet property="requestCallOutlet" destination="IKQ-9A-3R6" id="2K2-lc-TiC"/>
                                         </connections>

@@ -12,6 +12,7 @@ import UIKit
 class ContactTableCell: UITableViewCell {
     
     @IBOutlet weak var contactDetailView: UIView!
+    @IBOutlet weak var nameFirstLetterOutlet: UILabel!
     @IBOutlet weak var nameLabelOutlet: UILabel!
     @IBOutlet weak var mobileNumberOutlet: UIButton!
     @IBOutlet weak var callButtonOutlet: UIButton!
