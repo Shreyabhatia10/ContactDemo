@@ -43,5 +43,9 @@ final class ContactManager: NSObject {
             contactDetail = ContactModal(name: name, contact: phoneArray)
             ContactManager.contactArray.append(contactDetail)
         }
+        let sortedArr = ContactManager.contactArray.sorted {
+            return $0.name < $1.name
+        }
+        ContactManager.contactArray = sortedArr
     }
 }
