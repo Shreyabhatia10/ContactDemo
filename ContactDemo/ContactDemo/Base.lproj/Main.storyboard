@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="2951" y="-2193"/>
         </scene>
-        <!--View Controller-->
+        <!--Favourite View Controller-->
         <scene sceneID="uGh-rd-aL0">
             <objects>
-                <viewController id="pLc-fq-8Be" sceneMemberID="viewController">
+                <viewController id="pLc-fq-8Be" customClass="FavouriteViewController" customModule="ContactDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oUP-rK-3wI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,7 +324,7 @@
             <objects>
                 <tabBarController id="YhN-VP-eZt" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="64w-Pw-yPZ"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dox-29-lqc">
+                    <tabBar key="tabBar" tag="2" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dox-29-lqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

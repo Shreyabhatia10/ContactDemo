@@ -19,6 +19,7 @@
 		B5F993C822143AF40074F87D /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F993C722143AF40074F87D /* ContactManager.swift */; };
 		B5F993CA22153ABA0074F87D /* ContactModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F993C922153ABA0074F87D /* ContactModal.swift */; };
 		B5F993CC221599170074F87D /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F993CB221599170074F87D /* PopOverViewController.swift */; };
+		B5F993D222167E0C0074F87D /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F993D122167E0C0074F87D /* FavouriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B5F993C722143AF40074F87D /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
 		B5F993C922153ABA0074F87D /* ContactModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModal.swift; sourceTree = "<group>"; };
 		B5F993CB221599170074F87D /* PopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
+		B5F993D122167E0C0074F87D /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				B5F993C922153ABA0074F87D /* ContactModal.swift */,
 				B5F993C722143AF40074F87D /* ContactManager.swift */,
 				B5F9938922129CA70074F87D /* ContactsViewController.swift */,
+				B5F993D122167E0C0074F87D /* FavouriteViewController.swift */,
 				B5F9938B2212EFA00074F87D /* ContactTableCell.swift */,
 				B5F993CB221599170074F87D /* PopOverViewController.swift */,
 				B5F9935B22117B4F0074F87D /* ViewController.swift */,
@@ -275,6 +278,7 @@
 				B5F9938A22129CA70074F87D /* ContactsViewController.swift in Sources */,
 				B5F993CC221599170074F87D /* PopOverViewController.swift in Sources */,
 				B5F9938C2212EFA00074F87D /* ContactTableCell.swift in Sources */,
+				B5F993D222167E0C0074F87D /* FavouriteViewController.swift in Sources */,
 				B5F9935A22117B4F0074F87D /* AppDelegate.swift in Sources */,
 				B5F993C822143AF40074F87D /* ContactManager.swift in Sources */,
 				B5F993CA22153ABA0074F87D /* ContactModal.swift in Sources */,

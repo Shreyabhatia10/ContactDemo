@@ -21,6 +21,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         contacts = ContactManager.contactArray
     }
+    
     //MARK: UITableViewDataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
@@ -55,6 +56,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         }
         tableView.reloadData()
     }
+    
     //calling on a number
     @objc private func callNumber(_ sender: UIButton) {
         let phoneNumber = contacts[sender.tag].contact[0]
